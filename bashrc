@@ -20,6 +20,7 @@ export GRADLE_OPTS="-Xmx1g"
 [[ -d /Library/Tomcat ]] && export CATALINA_HOME=/Library/Tomcat
 [[ -d /Library/Tomcat/Home ]] && export CATALINA_HOME=/Library/Tomcat/Home
 [[ -d /usr/local/ec2/ec2-api-tools ]] && export EC2_HOME=/usr/local/ec2/ec2-api-tools && export PATH=$PATH:$EC2_HOME/bin
+[[ -d /usr/local/ec2/AutoScaling ]] && export AWS_AUTO_SCALING_HOME=/usr/local/ec2/AutoScaling && export PATH=$PATH:$AWS_AUTO_SCALING_HOME/bin
 
 # For SSH
 export SHCN="StrictHostKeyChecking=no"
