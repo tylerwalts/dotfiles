@@ -35,14 +35,14 @@ backupExistingDotfile() {
 createSymbolicLink() {
     if [[ ! -L $HOME/.$1 ]]; then
         echo "Linking to $1 in home directory"
-        ln -s $dotDir/$1 $HOME/.$1
+        cp -r $dotDir/$1 $HOME/.$1
     fi
 }
 createCopy() {
     [[ -L $HOME/.$1 ]] && rm $HOME/.$1
     if [[ ! -e $HOME/.$1 ]]; then
         echo "Copying $1 to home directory"
-        cp $dotDir/$1 $HOME/.$1
+        cp -r $dotDir/$1 $HOME/.$1
     fi
 }
 createMyBashlibFile() {
@@ -51,7 +51,6 @@ createMyBashlibFile() {
     if [[ ! -e $my_file ]]; then  
         echo -e "Creating empty $my_file"
         echo -e "Add all user specific customizations to $my_file"
-        touch $my_file
     fi
     if [[ ! -e $my_bashlib ]]; then 
         echo -e "Creating $my_bashlib"

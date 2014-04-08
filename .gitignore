@@ -2,3 +2,6 @@ backups
 spf13-vim.sh
 spf13-vim.lock
 bashlib/my_bashlib.sh
+# For the files that spf13 bundle creates on windows
+Users*
+
