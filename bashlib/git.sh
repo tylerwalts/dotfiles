@@ -15,6 +15,8 @@ alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gundo="git reset HEAD"
+# Open all conflicts in vim to "Resolve Conflicts"
+alias rc="vim -p \$(git status -s | grep '^UU ' | awk '{print \$2}')"
 
 ### bare vim
 [[ -d $HOME/bin ]] && mkdir -p $HOME/bin
