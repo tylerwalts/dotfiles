@@ -3,4 +3,5 @@
 "Bundle 'vim-scripts/groovy.vim'
 "Bundle 'martintreurnicht/vim-gradle'
 "Bundle 'tfnico/vim-gradle'
+Bundle 'rodjek/vim-puppet'
 
